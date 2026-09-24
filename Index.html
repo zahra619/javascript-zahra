@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-     width, initial-scale=1.0">
+  <title>Latihan praktikum -     penjumlahan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .container {
+         background-color: white;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+    }
+    h1 {
+      font size: 18px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 15px;
+      text-align: center;
+      color: blue;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #hasil {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e7f3fe;
+      border-radius: 4px;
+      border-left: 4px solid #2196F3;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body> 
+    <div class="container">
+      <h1>Kalkulator Penjumlahan</h1>
+
+      <h2>Created By: Zahra Chairanti
+      </h2>
+
+      <label for="angka1">Angka Pertama:   </label>
+      <input type="number" id="angka1"  placeholder="Masukkan angka pertama">
+      <label for="angka2">Angka kedua:</label>
+      <input type="number" id="angka2" placeholder="Masukkan angka kedua">
+
+      <button onclick="hitung()">Hitung</button>
+      <p id="hasil">Hasil akan muncul di sini...</p>
+    </div>
+  
+  <script>
+    function hitung() {
+        var angka1 = parseFloat(document.getElementById("angka1").value);
+        var angka2 =parseFloat(document.getElementById("angka2").value);
+
+        if (isNaN(angka1) || isNaN(angka2)) {
+           document.getElementById("hasil").textContent=
+      "! Mohon masukkan kedua angka dengan   benar!";
+           return;
+        }
+      var hasil = angka1 + angka2;
+
+      document.getElementById("hasil").textContent =
+        "Hasil: " + angka1 + " + " + angka2 + " = " + hasil;
+    }
+  </script>
+</body>
+</html>
+  
+
+  
